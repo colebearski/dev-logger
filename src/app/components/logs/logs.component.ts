@@ -24,4 +24,12 @@ export class LogsComponent implements OnInit {
     this.logService.setFormLog(log);
   }
 
+  onDelete(log: Log) {
+    this.logs.forEach((current, index) => {
+      if (log.id === current.id) {
+        this.logs.splice(index, 1);
+      }
+    });
+  }
+
 }
