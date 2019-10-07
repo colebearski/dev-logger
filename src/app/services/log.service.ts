@@ -16,6 +16,10 @@ export class LogService {
 
   selectedLog = this.logSource.asObservable();
 
+  private stateSource = new BehaviorSubject<boolean>
+  (true);
+  stateClear = this.stateSource.asObservable();
+
   constructor() { 
     this.logs = [
       {id: '1', text: 'Gen components', date: new Date('12/26/2019 12:54:22')},
@@ -44,5 +48,17 @@ export class LogService {
       }
     });
     this.logs.unshift(log);
+  }
+
+  deleteLog(log: Log) {
+    this.logs.forEach((current, index) => {
+      if (log.id === current.id) {
+        this.logs.splice(index, 1);
+      }
+    });
+  }
+
+  clearState() {
+    this.stateSource.next(true);
   }
 }

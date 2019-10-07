@@ -51,6 +51,9 @@ export class LogFormComponent implements OnInit {
       // Call a service function to Update Log
       this.logService.updateLog(updateLog);
     }
+
+    // Clear state
+    this.clearState();
   }
 
   generateId() {
@@ -58,6 +61,14 @@ export class LogFormComponent implements OnInit {
         var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
       });
+  }
+
+  clearState() {
+    this.isNew = true;
+    this.id = '';
+    this.text = '';
+    this.date = '';
+    this.logService.clearState();
   }
 
 }
