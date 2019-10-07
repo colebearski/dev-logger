@@ -31,4 +31,9 @@ export class LogService {
   setFormLog(log: Log) {
     this.logSource.next(log);
   }
+
+  addLog(log: Log) {
+    // unshift (similar to push) places item at beginning of array
+    this.logs.unshift(log);
+  }
 }
