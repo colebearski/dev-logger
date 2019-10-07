@@ -25,6 +25,7 @@ export class LogsComponent implements OnInit {
 
     this.logService.getLogs().subscribe(logs => {
       this.logs = logs;
+      this.loaded = true;
     });
   }
 
