@@ -1,5 +1,19 @@
 # Devlogger
 
+## My Notes
+
+- Runing app
+`ng serve --open`
+
+- New componenets
+`ng generate component` or `ng g c components/navbar`
+for no spec files `ng g c components/navbar --spec false`
+
+
+
+
+## Ng Boilerplate (below)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
 
 ## Development server
