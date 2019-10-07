@@ -9,7 +9,8 @@
 `ng generate component` or `ng g c components/navbar`
 for no spec files `ng g c components/navbar --spec false`
 
-
+- New service
+`ng g s services/log`
 
 
 ## Ng Boilerplate (below)
