@@ -36,4 +36,13 @@ export class LogService {
     // unshift (similar to push) places item at beginning of array
     this.logs.unshift(log);
   }
+
+  updateLog(log: Log) {
+    this.logs.forEach((current, index) => {
+      if (log.id === current.id) {
+        this.logs.splice(index, 1);
+      }
+    });
+    this.logs.unshift(log);
+  }
 }
